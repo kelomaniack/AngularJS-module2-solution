@@ -11,7 +11,7 @@
     function ToBuyController(ShoppingListCheckOffService) {
         var toBuyItemAdder = this;
 
-        toBuyItemAdder.toBuyItems = ShoppingListCheckOffService.getToBuyItems();
+        toBuyItemAdder.items = ShoppingListCheckOffService.getToBuyItems();
 
         toBuyItemAdder.buyItem = function(index) {
             ShoppingListCheckOffService.addItemToBoughtItems(index);
@@ -23,7 +23,7 @@
     function AlreadyBoughtController(ShoppingListCheckOffService) {
         var boughtItemAdder = this;
 
-        boughtItemAdder.boughtItems = ShoppingListCheckOffService.getBoughtItems();
+        boughtItemAdder.items = ShoppingListCheckOffService.getBoughtItems();
     }
 
     function ShoppingListCheckOffService() {
